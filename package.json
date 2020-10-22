@@ -1,0 +1,29 @@
+{
+  "name": "github-project-issue-to-sheets",
+  "version": "1.0.0",
+  "description": "Wanna import your Issues info to Google Sheets?",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js",
+    "minify": "ncc build --minify index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViRGiL175/github-project-issue-to-sheets.git"
+  },
+  "author": "ViRGiL7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViRGiL175/github-project-issue-to-sheets/issues"
+  },
+  "homepage": "https://github.com/ViRGiL175/github-project-issue-to-sheets#readme",
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3",
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^4.0.0",
+    "@octokit/types": "^5.2.0",
+    "@octokit/rest": "^18.0.3",
+    "typescript": "3.4.3"
+  }
+}

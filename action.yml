@@ -1,0 +1,9 @@
+name: 'GitHub Project Issues to Google Sheets importer'
+description: 'Wanna import your Issues info to Google Sheets?'
+inputs:
+  github-access-token:
+    description: "GitHub Access Token"
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
