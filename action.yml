@@ -1,5 +1,8 @@
 name: 'GitHub Project Issues to Google Sheets importer'
 description: 'Wanna import your Issues info to Google Sheets?'
+branding:
+  icon: 'bar-chart-2'  
+  color: 'green'
 inputs:
   google-api-service-account-credentials:
     description: "Google API Service Account credentials JSON"
