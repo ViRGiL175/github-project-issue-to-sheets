@@ -1,0 +1,15 @@
+name: 'GitHub Project Issues to Google Sheets importer'
+description: 'Wanna import your Issues info to Google Sheets?'
+inputs:
+  google-api-service-account-credentials:
+    description: "Google API Service Account credentials JSON"
+    required: true
+  document-id:
+    description: "Google Sheets document ID"
+    required: true
+  sheet-name:
+    description: "Google Sheets list name to insert Issues data"
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
