@@ -1,5 +1,5 @@
-name: 'GitHub Project Issues to Google Sheets importer'
-description: 'Wanna import your Issues info to Google Sheets?'
+name: 'Transfer GitHub Project Issues into Google Sheets'
+description: 'Do you want to import your Issues info into Google Sheets?'
 branding:
   icon: 'bar-chart-2'  
   color: 'green'
