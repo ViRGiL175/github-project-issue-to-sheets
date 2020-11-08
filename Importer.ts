@@ -27,7 +27,7 @@ export class Importer {
             Core.endGroup()
 
             Core.startGroup("📑 Getting all Issues in repository...")
-            var page = 0
+            var page = 1
             var issuesData = []
             var issuesPage
             do {
@@ -88,10 +88,13 @@ export class Importer {
                     value.state,
                     value.pull_request ? "Pull Request" : "Issue",
                     value.title,
-                    JSON.stringify(labels),
-                    JSON.stringify(assignees),
-                    value.created_at,
-                    value.closed_at,
+                    value.html_url,
+                    Object.keys(labels).map(k => labels[k]).join(", "),
+                    Object.keys(assignees).map(k => assignees[k]).join(", "),
+                    value.milestone?.title,
+                    value.milestone?.state,
+                    value.milestone?.due_on,
+                    value.milestone?.html_url,
                 ])
             }
             issueSheetsData.forEach(value => {
@@ -109,7 +112,7 @@ export class Importer {
                     majorDimension: "ROWS",
                     range: sheetName + "!A1:1",
                     values: [
-                        ["#", "Status", "Type", "Title", "Labels", "Assignees", "Created at", "Closed at"]
+                        ["#", "Status", "Type", "Title", "URI", "Labels", "Assignees", "Milestone", "Status", "Deadline", "URI"]
                     ]
                 }
             })
