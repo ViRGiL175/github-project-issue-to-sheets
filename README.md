@@ -1,10 +1,10 @@
 # github-project-issue-to-sheets
-Wanna import your Issues info to Google Sheets?
+Do you want to import your Issues info into Google Sheets?
 
-Cause we want Repository dashboard, Burndown Chart and other analysis. Google Sheets is simplest way to build your custom dashboard!
+Sometimes we need Repository dashboard, Burndown Chart and other analytics. Google Sheets is the simplest way to build your custom dashboard!
 
 ## But how?
-It's pretty easy. But requires some steps:
+It's pretty easy. But it requires some steps:
 
 ### 1. Enable Google Sheets API
 
@@ -25,7 +25,7 @@ More info: https://developers.google.com/identity/protocols/oauth2/service-accou
 
 ### 3. Create Google Sheets document
 
-Then create new sheet for GitHub Issues data and add Google API Service Account email to your document with writer access.
+Then create new sheet for GitHub Issues data and add Google API Service Account email to your document with editor access
 
 ### 4. Add Action to your repository and provide input data
 
@@ -35,9 +35,9 @@ name: github-project-issue-to-sheets
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-workflow_dispatch:
-issues:
-types: [opened, deleted, transferred, closed, reopened, assigned, unassigned, labeled, unlabeled]
+  workflow_dispatch:
+  issues:
+    types: [opened, deleted, transferred, closed, reopened, assigned, unassigned, labeled, unlabeled]
 
 jobs:
     github-project-issue-to-sheets:
@@ -61,6 +61,6 @@ More info: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-
 
 More info: https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets
 
-### 6. Look at the exported Issues data in yur Sheets document
+### 6. Look at the exported Issues data in your Sheets document
 
 ![](https://i.imgur.com/U2t3nmo.png)
