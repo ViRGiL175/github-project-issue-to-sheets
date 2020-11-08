@@ -78,10 +78,13 @@ class Importer {
                     value.state,
                     value.pull_request ? "Pull Request" : "Issue",
                     value.title,
-                    JSON.stringify(labels),
-                    JSON.stringify(assignees),
-                    value.created_at,
-                    value.closed_at,
+                    value.html_url,
+                    Object.keys(labels).map(k => labels[k]).join(", "),
+                    Object.keys(assignees).map(k => assignees[k]).join(", "),
+                    value.milestone.title,
+                    value.milestone.state,
+                    value.milestone.due_on,
+                    value.milestone.html_url,
                 ]);
             }
             issueSheetsData.forEach(value => {
