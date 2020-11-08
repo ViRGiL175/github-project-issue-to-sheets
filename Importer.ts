@@ -91,10 +91,10 @@ export class Importer {
                     value.html_url,
                     Object.keys(labels).map(k => labels[k]).join(", "),
                     Object.keys(assignees).map(k => assignees[k]).join(", "),
-                    value.milestone.title,
-                    value.milestone.state,
-                    value.milestone.due_on,
-                    value.milestone.html_url,
+                    value.milestone?.title,
+                    value.milestone?.state,
+                    value.milestone?.due_on,
+                    value.milestone?.html_url,
                 ])
             }
             issueSheetsData.forEach(value => {

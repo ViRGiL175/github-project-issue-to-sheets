@@ -7,6 +7,7 @@ const GitHub = require("@actions/github");
 const googleapis_1 = require("googleapis");
 class Importer {
     async start() {
+        var _a, _b, _c, _d;
         try {
             Core.startGroup("🚦 Checking Inputs and Initializing...");
             const serviceAccountCredentials = Core.getInput(Importer.INPUT_SERVICE_ACCOUNT_JSON);
@@ -81,10 +82,10 @@ class Importer {
                     value.html_url,
                     Object.keys(labels).map(k => labels[k]).join(", "),
                     Object.keys(assignees).map(k => assignees[k]).join(", "),
-                    value.milestone.title,
-                    value.milestone.state,
-                    value.milestone.due_on,
-                    value.milestone.html_url,
+                    (_a = value.milestone) === null || _a === void 0 ? void 0 : _a.title,
+                    (_b = value.milestone) === null || _b === void 0 ? void 0 : _b.state,
+                    (_c = value.milestone) === null || _c === void 0 ? void 0 : _c.due_on,
+                    (_d = value.milestone) === null || _d === void 0 ? void 0 : _d.html_url,
                 ]);
             }
             issueSheetsData.forEach(value => {
