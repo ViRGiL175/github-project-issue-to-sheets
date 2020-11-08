@@ -20,7 +20,7 @@ class Importer {
             Core.info("Done.");
             Core.endGroup();
             Core.startGroup("📑 Getting all Issues in repository...");
-            var page = 0;
+            var page = 1;
             var issuesData = [];
             var issuesPage;
             do {
