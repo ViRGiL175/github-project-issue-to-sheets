@@ -101,7 +101,7 @@ class Importer {
                     majorDimension: "ROWS",
                     range: sheetName + "!A1:1",
                     values: [
-                        ["#", "Status", "Type", "Title", "Labels", "Assignees", "Created at", "Closed at"]
+                        ["#", "Status", "Type", "Title", "URI", "Labels", "Assignees", "Milestone", "Status", "Deadline", "URI"]
                     ]
                 }
             });
