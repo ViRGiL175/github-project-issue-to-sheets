@@ -132,7 +132,7 @@ export class Importer {
             Core.info("☑️ Done!")
 
         } catch (error) {
-            Core.setFailed(error)
+            Core.setFailed(JSON.stringify(error))
         }
     }
 }
