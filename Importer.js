@@ -30,7 +30,6 @@ class Importer {
                     owner: GitHub.context.repo.owner,
                     repo: GitHub.context.repo.repo,
                     state: "all",
-                    page
                 });
                 Core.info(`There are ${issuesPage.data.length} Issues...`);
                 issuesData = issuesData.concat(issuesPage.data);
